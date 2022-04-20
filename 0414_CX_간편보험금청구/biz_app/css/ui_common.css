@@ -1962,13 +1962,6 @@ a.btn_down_s{display:inline-block;position:relative;padding-left:1.8rem;font-siz
 a.btn_down_s:before{content:'';position:absolute;top:0.5rem;left:0;width:1.5rem;height:0.8rem;background:url(../../bizimage/images/common/spr_ico.png) -0.8rem -4.0rem no-repeat;background-size:25.0rem 44.0rem}
 a.btn_change_s{display:inline-block;padding-left:1.9rem;font-size:1.3rem;font-weight:500;color:#139da5}
 a.btn_change_s:before{content:'';position:absolute;top:0.7rem;left:0;width:1.5rem;height:0.8rem;background:url(../../bizimage/images/common/spr_ico.png) -2.0rem 0 no-repeat;background-size:25.0rem 44.0rem}
-/* 서류 등록 큰글씨 */
-ul.btn_ico>li>a.t, ul.btn_ico>li>button.t{padding:6rem 0 1.5rem;height:auto;text-align:center;font-size:1.9rem;font-weight:500;}
-ul.btn_ico>li>a.t:before, ul.btn_ico>li>button.t:before{top:0.6rem;left:50%;width:5.4rem;height:5.4rem;margin-left:-2.7rem;background:#fff url( ../../bizimage/images/common/spr_ico_l_2.png) no-repeat;background-size:12.5rem 6.0rem;}
-ul.btn_ico>li>a.t.c3:before, ul.btn_ico>li>button.t.c3:before{background-position:0 0;}
-ul.btn_ico>li>a.t.c4:before, ul.btn_ico>li>button.t.c4:before{background-position:-6.0rem 0;}
-html.zoom1 ul.btn_ico.t3>li{width:50%}
-html.zoom1 ul.btn_ico.t3>li+li{margin-top:0}
 /*****************************************************************
   button effect
 *****************************************************************/
