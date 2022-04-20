@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="vulnerable">
+
+<head>
+    <meta http-Equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>한화손해보험</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- 퍼블리싱 확인용, 개발파일에는 추가하지 마세요 -->
+    <script type="text/javascript" src="../js/ui.lib.js"></script>
+    <script type="text/javascript" src="../js/publish.js"></script>
+    <script type="text/javascript" src="../js/m_ui_common.js"></script>
+    <!-- //퍼블리싱 확인용 -->
+    <!-- 화면 확인을 위해 숨김처리 script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=cbc7259da80f7c21be54e19b991f8b24f5b9543a " charset="utf-8"></script -->
+</head>
+
+<body>
+    <div data-role="page" id="wraper">
+        <!-- header S -->
+        <header id="header">
+            <div class="inner">
+                <a href="#" class="btn_prev" role="button"><span>이전</span></a>
+                <h1>간편보험금 청구</h1>
+                <a id="btnGnb" class="btn_gnb" href="#gnb" role="button"><span>메뉴</span></a>
+            </div>
+        </header>
+        <!--// header E -->
+        <!-- gnb S -->
+        <script src="../inc/navi.js"></script>
+        <!--// gnb E -->
+        <section id="sub_section">
+            <h2 class="blind">간편 보험금청구</h2>
+            <article id="container_box">
+                <div class="container_inner">
+                    <div class="coa_box">
+						<div class="tit">
+							<h2>보험금청구를 위한<br>필수 동의를 진행해 주세요</h2>
+						</div>
+						<div class="section agree">
+							<div class="agree_item agree_tit no_form">
+								<div class="checkbox">
+									<input id="agreeAll" type="checkbox">
+									<label for="agreeAll" class="lbl">전체동의(필수)</label>
+								</div>
+							</div>
+							<div class="agree_list nt">
+								<div class="agree_item">
+									<div class="terms">
+										<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1',1);" role="button">수집 · 이용에 관한 사항<i></i></a>
+									</div>
+								</div>
+								<div class="agree_item">
+									<div class="terms">
+										<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1',2);" role="button">제공에 관한 사항<i></i></a>
+									</div>
+								</div>
+								<div class="agree_item">
+									<div class="terms">
+										<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1',3);" role="button">조회에 관한 사항<i></i></a>
+									</div>
+								</div>
+							</div>
+                        </div>						
+					</div>
+                    <div class="fixed_bottom_button">
+                        <ul class="grid s1">
+                            <li><button type="button" class="btn s1 c1" onclick="location.href='HIMA_PG_CFA_9004.html'">등록 완료하기</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- 약관 팝업 : 시작 -->
+	<div id="ruleDialog1" class="dialog full" role="dialog" aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>상세보기</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+            <div class="dialog_content">
+                <div class="rule_section">
+                    <h3>고객정보 관리 및 가입설계를 위한 요약 동의서</h3>
+                    <div class="rule_contents">
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>귀하는 개인(신용)정보의 수집 · 이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는
+                                        철회할 수 있습니다. 다만, 본 동의는 ‘고객정보 관리 및 가입설계’를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무수행이 불가능합니다.</li>
+                                    <li>본 동의서는 요약동의서이며 요청하면 전체 동의서를 안내받으실 수 있습니다. 요청하시겠습니까?</li>
+                                </ul>
+                                <ul class="grid nbsp s1">
+                                    <li> <a href="#" class="btn r1 c3 mb20" id="downFormDetail" role="button">다운로드</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rule_section">
+                    <h3>1. 수집ㆍ이용 목적</h3>
+                    <div class="rule_contents">
+                        <div class="rule_item">
+                            <h4>수집ㆍ이용ㆍ조회목적</h4>
+                            <p>보험계약 상담, 재무설계 서비스, 보험계약 인수여부 판단(건강진단 및 계약적부 조사 포함), 실손형보험 및 정액담보 가입사항 확인, 적정보험료 산출/검증 (할인, 할증 포함),
+                                다중이용업소 화재배상책임 가입대상 확인</p>
+                        </div>
+                        <div class="rule_item">
+                            <h4>보유 및 이용기간</h4>
+                            <div class="list_txt">
+                                <ul>
+                                    <li>동의일로부터 1년까지</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <h4>수집ㆍ이용 항목</h4>
+                            <div class="list_txt">
+                                <ul>
+                                    <li>고유식별정보 (4개) : 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                                    <li>위 고유식별정보 수집 · 이용에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM1_2" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM1_1" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>민감정보 (1개) : 피보험자의 질병·상해에 관한 정보</li>
+                                    <li>위 민감정보 수집 · 이용에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM1_2" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM1_1" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>개인(신용)정보 (16개)<br>
+                                        일반개인정보 (11개) : 성명, 주소 등<br>
+                                        신용거래정보 (4개) : 보험계약정보, 보험금정보 등<br>
+                                        신용능력정보 (1개) : 소득 및 재산 정보 등</li>
+                                    <li>위 개인신용정보 수집 · 이용에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM1_2" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM1_1" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rule_section mt30">
+                    <h3>2. 제공에 관한 사항</h3>
+                    <div class="rule_contents">
+                        <div class="rule_item">
+                            <h4>제공받는 자 (4개)</h4>
+                            <div class="list_txt">
+                                <p>국내 재보험사, 국외 재보험사, 종합신용정보집중기관, 건강진단/계약적부 조사를 위탁받은 자
+                                    (병원, 의원, 헬스케어서비스업체 등)</p>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <h4>제공받는 자의 이용목적</h4>
+                            <div class="list_txt">
+                                <p>보험계약 인수여부 판단, 보험금 지급 및 재보험 마감 및 정산, 개인(신용)정보 조회, 건강진단(지정의 또는 파라메딕 또는 헬스케어서비스업체), 고지사항확인, 의료자문, 본인
+                                    실명인증 등</p>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <h4>보유 및 이용기간</h4>
+                            <div class="list_txt">
+                                <ul>
+                                    <li>동의일로부터 보험계약의 청약시까지(최대 1년)</li>
+                                    <li>※ 외국 재보험사의 국내지점이 재보험계약 가입 판단 지원, 보험계약 공동인수 지원 업무를 위탁하기 위한 경우 별도의 동의 없이 외국 소재 본점에 귀하의 정보를 이전할
+                                        수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <h4>제공 항목</h4>
+                            <div class="list_txt">
+                                <ul>
+                                    <strong>국내</strong>
+                                    <li>고유식별정보 (4개) : 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                                    <li>위 고유식별정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM1_2" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM1_1" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>민감정보 (1개) : 피보험자의 질병·상해에 관한 정보</li>
+                                    <li>위 민감정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    개인(신용)정보 (16개)
+                                    <li>일반개인정보 (11개) : 성명, 주소 등<br>
+                                        신용거래정보 (4개) : 보험계약정보, 보험금정보 등<br>
+                                        신용능력정보 (1개) : 소득 및 재산 정보 등</li>
+                                    <li>위 개인신용정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <strong>국외</strong>
+                                    <li>고유식별정보 (4개) : 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                                    <li>위 고유식별정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM1_2" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM1_1" type="radio" name="agreeSM1">
+                                <label for="agreeSM1_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>민감정보 (1개) : 피보험자의 질병·상해에 관한 정보</li>
+                                    <li>위 민감정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    개인(신용)정보 (16개)
+                                    <li>일반개인정보 (11개) : 성명, 주소 등<br>
+                                        신용거래정보 (4개) : 보험계약정보, 보험금정보 등<br>
+                                        신용능력정보 (1개) : 소득 및 재산 정보 등</li>
+                                    <li>위 개인신용정보 제공에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <p class="mt10">※ 업무위탁을 목적으로 개인(신용)정보를 처리하는 경우 별도의 동의 없이 업무 수탁자에게 귀하의 정보를 제공할 수 있습니다. (홈페이지
+                            [www.hwgeneralins.com]에서 확인 가능)</p>
+                    </div>
+                </div>
+                <div class="rule_section mt30">
+                    <h3>3. 조회에 관한 사항</h3>
+                    <div class="rule_contents">
+                        <div class="rule_item">
+                            <h4>제공받는 자</h4>
+                            <div class="list_txt">
+                                <ul>
+                                    <li>조회 대상 기관 (3개)</li>
+                                    <li>종합신용정보집중기관, 행정안전부(소방본부, 소방서 포함), 보험요율산출기관/공공기관</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <h4>조회 목적</h4>
+                            <p>보험계약 및 보험금지급 관련 정보(사고정보 포함), 보험 가입한도 조회, 실제 발생하는 손해를 보상하는 실손형 보험의 중복확인, 다중이용업소정보</p>
+                        </div>
+                        <div class="rule_item">
+                            <h4>조회 동의의 효력기간</h4>
+                            <p>동의일로부터 보험계약의 청약시까지(최대 1년)</p>
+                        </div>
+                        <div class="list_txt">
+                            <h4>조회항목</h4>
+                            <ul>
+                                <li>고유식별정보 (4개) : 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</li>
+                                <li>위 고유식별정보 조회에 동의하십니까?</li>
+                            </ul>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    <li>민감정보 (1개) : 피보험자의 질병·상해에 관한 정보</li>
+                                    <li>위 민감정보 조회에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <div class="rule_item">
+                            <div class="list_txt">
+                                <ul>
+                                    개인(신용)정보 (16개)
+                                    <li>일반개인정보 (11개) : 성명, 주소 등<br>
+                                        신용거래정보 (4개) : 보험계약정보, 보험금정보 등<br>
+                                        신용능력정보 (1개) : 소득 및 재산 정보 등</li>
+                                    <li>위 개인신용정보 조회에 동의하십니까?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agree_list gird right">
+                            <div class="radio s">
+                                <input id="agreeSM3_2" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_2">동의하지 않음&nbsp;</label>
+                            </div>
+                            <div class="radio s">
+                                <input id="agreeSM3_1" type="radio" name="agreeSM3">
+                                <label for="agreeSM3_1">동의함&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+			<div class="dialog_footer">
+                <ul class="grid s2">
+                    <li class="w35"><a href="#" class="btn s1 c2" role="button">비동의</a></li>
+                    <li class="w65"><button type="button" class="btn s1 c1">전체동의</button></li>
+                </ul>
+			</div>
+		</div>
+	</div>
+    <!-- 약관 팝업 : 끝 -->
+</body>
+
+</html>

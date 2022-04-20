@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="vulnerable">
+
+<head>
+    <meta http-Equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>한화손해보험</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- 퍼블리싱 확인용, 개발파일에는 추가하지 마세요 -->
+    <script type="text/javascript" src="../js/ui.lib.js"></script>
+    <script type="text/javascript" src="../js/publish.js"></script>
+    <script type="text/javascript" src="../js/m_ui_common.js"></script>
+    <!-- //퍼블리싱 확인용 -->
+    <!-- 화면 확인을 위해 숨김처리 script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=cbc7259da80f7c21be54e19b991f8b24f5b9543a " charset="utf-8"></script -->
+</head>
+
+<body>
+    <div data-role="page" id="wraper">
+        <!-- header S -->
+        <header id="header">
+            <div class="inner">
+                <a href="#" class="btn_prev" role="button"><span>이전</span></a>
+                <h1>간편보험금 청구</h1>
+                <a id="btnGnb" class="btn_gnb" href="#gnb" role="button"><span>메뉴</span></a>
+            </div>
+        </header>
+        <!--// header E -->
+        <!-- gnb S -->
+        <script src="../inc/navi.js"></script>
+        <!--// gnb E -->
+        <section id="sub_section">
+            <h2 class="blind">간편 보험금청구</h2>
+            <article id="container_box">
+                <div class="container_inner">
+                    <div class="coa_box">
+                        <div class="tit">
+                            <h2>총 <span class="tc1 tb2">6</span>장이 등록되었습니다</h2>
+                            <span class="sub tc6 mt30">이미지를 누르시면<br>확대된 이미지를 볼 수 있습니다</span>
+                        </div>
+                        <div class="section">
+							<ul class="docu_list grid s3">
+								<li><a href="#" class="img" role="button" onclick="Dialog.open('#docuDeatailDialog');"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+								<li><a href="#" class="img" role="button"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+								<li><a href="#" class="img" role="button"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+								<li><a href="#" class="img" role="button"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+								<li><a href="#" class="img" role="button"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+								<li><a href="#" class="img" role="button"><img src="../../bizimage/images/common/sample_document1.jpg" alt=""></a><a href="#" class="del" role="button"></a></li>
+							</ul>
+						</div>
+                    </div>
+                    <div class="fixed_bottom_button">
+                        <ul class="grid s2">
+                            <li class="w35"><button type="button" class="btn s1 c2">서류추가</button></li>
+                            <li class="w65"><button type="button" class="btn s1 c1" onclick="location.href='HIMA_PG_CFA_9003.html'">다음</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- 상세보기 팝업 : 시작 -->
+	<div id="docuDeatailDialog" class="dialog full" role="dialog" aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>상세보기</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="docu_detail_section">
+					<div class="docu_swipe">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../../bizimage/images/common/sample_document1.jpg" alt="" /> 
+							</div>
+							<div class="swiper-slide">
+								<img src="../../bizimage/images/common/sample_document1.jpg" alt="" /> 
+							</div>
+							<div class="swiper-slide">
+								<img src="../../bizimage/images/common/sample_document1.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="docu_navi">
+						<button type="button" class="docu_prev"><span class="offscreen">이전서류</span></button>
+						<button type="button" class="docu_next"><span class="offscreen">다음서류</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="dialog_footer">
+				<ul class="grid s2">
+                    <li class="w35"><button type="button" class="btn s1 c2">삭제</button></li>
+                    <li class="w65"><button type="button" class="btn s1 c1">닫기</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 상세보기 팝업 : 끝 -->
+</body>
+
+</html>
