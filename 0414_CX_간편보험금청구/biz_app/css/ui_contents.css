@@ -1480,11 +1480,6 @@ p.motion.animated{opacity:1;transform:translateY(0rem);transition:1.0s}
 .h_summary .section.void .list ul{border-top:0;padding-top:0;margin-top:0}
 .h_summary .section.void .list.line:last-child{border-bottom:0}
 .h_summary .section.void .list.line:last-child>.inner{padding-bottom:0}
-/* 고객정보변경 */
-.icon_leaf{display:inline-block;width:1.7rem;height:1.7rem;background:url(../../bizimage/images/coa/ico_eco_leaf.png) no-repeat 0 0 / 1.7rem auto;}
-.lb>strong+.icon_leaf{margin:0 0 -.3rem .3rem;}
-.eco_lb{font-size:1.1rem;}
-.eco_lb>.tag{margin:0 .4rem 0 .8rem;background-color:#33ae83;}
 /*****************************************************************
   계약변경   
 *****************************************************************/
@@ -1907,19 +1902,3 @@ body.app_guide{background-color:#f8f8f8;padding-bottom:env(safe-area-inset-botto
 	.docu_detail_section.head .docu_swipe{top:9.0rem}
 	.docu_detail_section.head .docu_swipeTransparent{top:9.0rem}
 }
-/*****************************************************************
-  간편 보험금 청구
-*****************************************************************/
-html.vulnerable{font-size:86%;}
-html.vulnerable .tit h2{font-size:2.0rem}
-html.vulnerable #header .btn_prev,
-html.vulnerable #header .btn_gnb{position:absolute;top:0;display:block;width:5.5rem;height:5.0rem;text-align:center;}
-html.vulnerable #header .btn_prev>span,
-html.vulnerable #header .btn_gnb>span{line-height:5.0rem;color:#333}
-html.vulnerable #header .btn_prev{left:0;}
-html.vulnerable #header .btn_prev::before,html.vulnerable #header .btn_prev::after{display:none;}
-html.vulnerable #header .btn_gnb{right:0;}
-ul.btn_ico>li>a.t, ul.btn_ico>li>button.t{padding:6rem 0 1.5rem;height:auto;text-align:center;font-size:1.9rem;font-weight:500;}
-ul.btn_ico>li>a.t:before, ul.btn_ico>li>button.t:before{top:0.6rem;left:50%;width:5.4rem;height:5.4rem;margin-left:-2.7rem;background:#fff url( ../../bizimage/images/common/spr_ico_l_2.png) no-repeat;background-size:12.5rem 6.0rem;}
-ul.btn_ico>li>a.t.c3:before, ul.btn_ico>li>button.t.c3:before{background-position:0 0;}
-ul.btn_ico>li>a.t.c4:before, ul.btn_ico>li>button.t.c4:before{background-position:-6.0rem 0;}
