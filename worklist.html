@@ -1,0 +1,2731 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="Robots" content="noindex, nofollow">
+<meta name="format-detection" content="telephone=no">
+<title>모바일고객센터 - 퍼블리싱</title>
+<style>
+    /* Reset */
+html {font-size:10px}
+html, body {
+    width:100%; height:100%; direction:ltr;
+    -webkit-text-size-adjust:none;
+    text-size-adjust:none;
+    -webkit-font-smoothing:subpixel-antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-text-stroke:1px transparent;
+    -webkit-touch-callout:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    text-rendering:optimizeSpeed;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, button, address, em, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr, figure {margin:0; padding:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {display:block}
+body, select, input, textarea, button, th, td {color:#343a40; font-family:Montserrat, 'Noto Sans KR', 'Apple SD Gothic Neo', AppleSDGothicNeo-Light, AppleGodic, helvetica, sans-serif; font-size:1.2rem; line-height:1.6; letter-spacing:-0.04em;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:500}
+dl, menu, ol, ul, li {list-style:none}
+form, fieldset, iframe {display:block; border:0 none}
+input, textarea, select {-webkit-appearance:none; appearance:none; vertical-align:middle; outline:0}
+input, select, label, button{cursor:pointer}
+textarea {resize:none}
+button {overflow:visible}
+button::-moz-focus-inner {padding:0; border:0}
+a {color:inherit}
+a, a:link ,a:hover, a:visited, a:focus, a:active {text-decoration:none}
+img, button, svg {border:0 none; vertical-align:middle}
+img {max-width:100%; height:auto}
+table {width:100%; border-collapse:collapse; border-spacing:0; table-layout:fixed}
+i, em, address {font-style:normal}
+hr {display:none; height:0}
+caption, legend, .screen-out {width:1px; height:1px; margin:0; padding:0; color:transparent; text-indent:-9999em; overflow:hidden; visibility:hidden; font-size:0; line-height:0; clip:rect(1px, 1px, 1px, 1px)}
+.screen-out {position:absolute !important}
+*, :before, :after {box-sizing:border-box}
+
+/* Layout */
+body {background-color:#fff; overflow:hidden}
+/* iframe {width:100%; height:100%; margin:0; border:0; background-color:#fff} */
+iframe {width:100%; /* height:100%; */ margin:0; border:0; background-color:#fff}
+.container-scroll {position:relative; height:100%; overflow:auto}
+.scroll-none {overflow:hidden}
+.dim-layer {position:fixed; left:0; top:0; bottom:0; right:0; z-index:99; display:block; overflow:hidden; width:100%; height:100%; background-color:rgba(33,37,41,0.75)}
+
+#pub-header {position:fixed; top:0; left:0; right:0; height:6rem; padding-left:env(safe-area-inset-left); background-color:#f1f3f5}
+#pub-main {height:100vh; padding-top:11.5rem; font-size:1.3rem}
+#pub-preview {position:fixed; top:0; bottom:0; right:0; width:42rem; border-left:1px solid #f1f3f5}
+#pub-nav {position:fixed; top:6rem; bottom:0; left:0; z-index:100; width:20rem; padding-left:env(safe-area-inset-left); border-right:1px solid #f1f3f5; background-color:#fff; transition:all .3s ease-in-out}
+#pub-nav.show {left:0}
+
+.has-preview #pub-header {right:36rem}
+.has-preview #pub-main {margin-right:42rem; padding-left:env(safe-area-inset-left)}
+.has-preview #pub-main .list-wrap {padding:0 2rem 5rem}
+.has-nav #pub-main {margin-left:20rem}
+
+/* Header */
+.pub-logo {display:inline-block; margin:0 3rem 0 1.8rem; vertical-align:middle}
+.pub-logo img {height:3rem}
+.pub-logo .label {display:inline-block; margin:-2px 0 0 3px; padding:0 .6rem; border-radius:3px; background-color:#00C2A5; color:#fff; vertical-align:middle; letter-spacing:.02em}
+.pub-menu {display:inline-block; vertical-align:middle}
+.pub-menu li {display:inline-block; margin:0 .5rem}
+.pub-menu li a {position:relative; display:block; height:6rem; padding:0 1rem; color:#868e96; font-size:1.6rem; line-height:6.2rem; letter-spacing:-0.02em}
+.pub-menu li.current a {color:#00C2A5; font-weight:700}
+.pub-menu li.current a:after {content:''; position:absolute; top:1.8rem; right:.4rem; display:block; width:4px; height:4px; border-radius:100%; background-color:#00C2A5}
+
+/* Navigation */
+.btn-pub-nav {position:fixed; top:0; left:0; z-index:100; display:none; width:5.2rem; height:5.2rem; background-color:transparent; outline:0; transition:all .3s ease-in-out}
+.btn-pub-nav .line-wrap {position:absolute; top:50%; left:50%; display:block; width:2rem; height:16px; transform:translate3d(-50%, -50%, 0)}
+.btn-pub-nav .line-wrap span {position:absolute; left:0; display:block; width:100%; height:2px; border-radius:2px; background-color:#adb5bd; transition:all .3s ease-in-out}
+.btn-pub-nav .line-wrap span:nth-child(1) {top:0}
+.btn-pub-nav .line-wrap span:nth-child(2) {top:50%; margin-top:-1px}
+.btn-pub-nav .line-wrap span:nth-child(3) {bottom:0}
+.btn-pub-nav.close {left:calc(100% - 6rem)}
+.btn-pub-nav.close .line-wrap span {top:50%; bottom:auto; background-color:rgba(255,255,255,.75)}
+.btn-pub-nav.close .line-wrap span:nth-child(1) {transform:rotate(45deg)}
+.btn-pub-nav.close .line-wrap span:nth-child(2) {display:none}
+.btn-pub-nav.close .line-wrap span:nth-child(3) {transform:rotate(-45deg)}
+
+.pub-nav-scroll {height:100%; overflow:auto}
+.nav-list {padding:1rem 0}
+.nav-list li a {position:relative; display:block; margin:.4rem 0; padding:.4rem 1rem .4rem 3rem; font-size:1.5rem}
+.nav-list li.active a {color:#00C2A5}
+.nav-list li.active a:before {content:''; position:absolute; top:0; left:0; bottom:0; display:block; width:.3rem; height:100%; background-color:#00C2A5}
+
+/* Main */
+.btn-new-window {position:absolute; top:0; right:0; display:inline-block; padding:.4rem 1rem; background-color:#adb5bd; color:#fff}
+.list-head {background-color:#fff; border-bottom:2px solid #343a40;}
+.list-head {padding:1rem 0 1.2rem; overflow:hidden; padding-right:13rem;}
+.list-count {color:#868e96; font-size:1.1rem; font-weight:400; text-align:right}
+.list-count dt, .list-count dd {display:inline-block}
+.list-count dd + dt {margin-left:1.2rem}
+.list-count dt:after {content:':'; margin-left:.4rem; margin-right:.2rem}
+.list-count dd em { font-style:normal; letter-spacing:0}
+.list-count dd.progress {color:#ed6b28}
+.list-head .list-count {float:right; color:#343140; font-size:1.2rem;}
+.list-head .list-count dd em {margin-right:.2rem; font-size:1.8rem; font-weight:700}
+
+/* Pub List Table */
+.list-table {border-bottom: 1px solid #dee2e6}
+/* .list-table {border-top:2px solid #343a40; border-bottom: 1px solid #dee2e6} */
+.list-table table {width:100%; table-layout:fixed}
+.list-table th, .list-table td {padding:.7rem; border-left: 1px dashed #e9ecef; font-size:1.2rem; word-break:break-word; text-align:left; vertical-align:top}
+.list-table th:first-child, .list-table td:first-child {border-left:0}
+.list-table thead tr {background-color:#fff}
+.list-table thead th {padding:1.2rem 0; border-left-style:solid; color:#343a40; font-size:1.3rem; font-weight:700; text-align:center; vertical-align:middle; letter-spacing:0}
+.list-table tbody tr:hover td {background:#f8f9fa}
+.list-table tbody tr.current td {background-color:#fff0e4 !important}
+.list-table tbody th {padding: 12px 16px 10px; border:0; background-color:#343a40; color:#fff; font-weight:700; text-align:left; vertical-align:middle}
+.list-table tbody td {border-top: 1px solid #dee2e6; vertical-align:middle}
+.list-table tbody tr:nth-child(2) td {border-top:0}
+.list-table .num {width:4rem}
+.list-table .id {width:10rem; font-weight:700}
+.list-table .bt1 {border-top:1px solid #333;}
+/* .list-table .title {width:32rem} */
+.list-table .title1 {font-weight:500}
+.list-table .title2 {width:auto}
+.list-table .url {width:35rem}
+.list-table .step2 {padding-left:2rem;}
+.list-table .th_status {width:6rem;}
+.list-table .status {width:6rem; font-size:20px; line-height:0.8rem}
+.list-table .update {width:12rem; letter-spacing:0px /*color:transparent*/}
+.list-table td.num,
+.list-table td.status {padding-left:0; padding-right:0; text-align:center}
+.list-table td.url a {font-family:'Noto Sans KR'; font-weight:500; display:block; text-decoration:none; white-space:nowrap}
+.list-table .category span {margin-left:.8rem; color:rgba(255,255,255,.5); font-weight:400}
+.list-table .memo {margin-left:1rem; color:#4d94dc}
+.list-table .memo.highlight {color:#ff2454}
+.list-table .memo.block {display:block; margin-left:0}
+.status .ing {color:#00C2A5; font-size:1.2rem;}
+.status .modify {color:#ff922b; font-size:1.2rem}
+.done {}
+
+.num {font-family:Montserrat, 'Noto Sans KR', 'Apple SD Gothic Neo', AppleSDGothicNeo-Light, AppleGodic, helvetica, sans-serif;}
+
+
+
+/* 작업중 페이지 */
+.icon-ox, .ox-quiz .quiz-area:before,
+.ing-result .result-area .icon-ox:before,
+.ing-result .result-area .icon-ox:after {display:inline-block; background-image:url(ing.png); background-repeat:no-repeat; background-size:196px 132px}
+
+.ing_img {display:inline-block; background-image:url(ing.png); background-repeat:no-repeat; background-size:196px 132px; width:196px; height:132px;}
+
+.ing-result {padding-top:4.2rem}
+.ing-result .result-area .icon-ox {position:relative; display:block; width:95px; height:95px; margin:0 auto 7px}
+.ing-result .result-area .icon-ox.wrong {background-position:-100px -36px}
+.ing-result .result-area .icon-ox:before,
+.ing-result .result-area .icon-ox:after {content:''; position:absolute; display:block}
+.ing-result .result-area .icon-ox.wrong:before {top:-12px; left:-5px; width:35px; height:35px; border-radius:35px; background-color:#333}
+.ing-result .result-area .icon-ox.wrong:before {background-position:-90px 0; animation:wrongIcon .4s ease-in-out both}
+.ing-result .result-area .icon-ox.wrong:after {top:24px; right:21px; width:9px; height:13px; background-position:-30px 0; animation:wrongAni .6s ease-in-out .2s both}
+
+@keyframes wrongIcon {
+    0% {background-color:#ff2454; transform:scale(0)}
+    75% {background-color:#ff2454; transform:scale(1)}
+    100% {background-color:#333; transform:scale(1)}
+}
+@keyframes wrongAni {
+    0% {transform:scale(0) translate3d(0,-30px,0)}
+    100% {transform:scale(1) translate3d(0,0,0)}
+}
+
+.ing-result .result-area .result {font-size:2.4rem; font-weight:700}
+.ing-result .correct-box {margin-top:1.6rem}
+.ing-result .correct-box .bold {font-weight:700}
+.ing-result .correct-box .text + .text {margin-top:.4rem}
+.ing-result .result-guide {margin:3.5rem 0 1.5rem}
+.ing-result .result-guide .point {font-weight:700}
+.ing-result .result-guide .point:before {content:'P'; display:inline-block; width:1.6rem; height:1.6rem; margin:-4px 4px 0 0; padding-left:1px; border-radius:100%; background-color:#ff2454; color:#fff; font-size:9px; font-weight:400; text-align:center; line-height:1.6rem; vertical-align:middle}
+.ing-result .btn-wrap {margin:3rem 0 4rem}
+
+.center {text-align:center}
+.inner {padding-left:1.5rem; padding-right:1.5rem}
+
+/*****************************************************************
+  Device Frame
+*****************************************************************/
+.frame_device{position:fixed;right:20px;width:376px;transition:width 0.4s}
+@media screen and (max-width: 1024px) {
+.frame_device{display:none}
+}
+@keyframes bound {
+  0{transform:translateY(0)}
+  40%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+.frame_device .device{position:relative;padding:30px 8px 20px;background-color:#000;border-radius:20px}
+.frame_device .device:before{content:'';position:absolute;top:13px;left:50%;width:80px;height:5px;margin-left:-40px;background-color:#333;border-radius:5px}
+.frame_device .device .btn_size_set{position:absolute;top:6px;right:15px}
+.frame_device .device .btn_size_set button{height:15px;line-height:15px;margin-left:2px;background-color:#fff;font-size:11px;font-weight:bold;color:#000;border-radius:5px}
+.frame_device .device iframe{background-color:#fff;transition:width 0.4s}
+    
+</style>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<div id="wrap" class="has-preview">
+    <header id="pub-header" role="banner">
+        <h1 class="pub-logo">
+            <img src="mobile/img/logo_hwgeneralins.png" alt="한화손해보험">
+        </h1>
+        <nav class="pub-menu">
+            <ul>
+                <li>
+                    <a href="#c1">고객(Mobile)</a>
+                </li>
+                <li>
+                    <a href="#c2">상담사(PC)</a>
+                </li>
+                <li>
+                    <a href="#c3">관리자(Admin)</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="list-head">
+            <dl class="list-count">
+                <dt class="total">총 페이지</dt>
+                <dd class="total"><em>0</em></dd>
+                <dt class="finished">완료된 페이지</dt>
+                <dd class="finished"><em>0</em></dd>
+                <dt class="progress">진행률</dt>
+                <dd class="progress"><em>0</em>%</dd>
+            </dl>
+        </div>
+    </header>
+
+    <main id="pub-main" role="main">
+
+        <div class="container-scroll">
+            <div class="list-wrap">
+
+                <!-- Page List  -->
+                <div class="list-table">
+                    <table id="page-list">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="num">No</th>
+                                <th scope="col" class="id">Page ID</th>
+                                <th class="title1" scope="col">2depth</th>
+                                <th class="title2" scope="col">3depth</th>
+								<th scope="col" class="url">Publishing</th>
+                                <th scope="col" class="th_status ">Status</th>
+                                <th scope="col" class="update">Update / Desc</th>
+                                <th scope="col" class="memo">비고</th>
+                            </tr>
+                        </thead>
+
+                        <!-- 고객(모바일) -->
+                        <tbody id="c1">
+                            <tr>
+                                <th class="category" colspan="8">고객(모바일)</th>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                            	<td class="title1">랜딩</td>
+                            	<td class="title2"></td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0201(랜딩).html" target="_blank">/모바일/MO-01-0201(랜딩).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                            	<td class="title1">유의사항 안내</td>
+                            	<td class="title2">신분증 준비</td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0301(유의사항안내1).html" target="_blank">/모바일/MO-01-0301(유의사항안내1).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">7.22 페이징 숫자변경(1/4), 7.29 이미지명 변경</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                            	<td class="title1"></td>
+                            	<td class="title2">데이터 환경</td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0302(유의사항안내2).html" target="_blank">/모바일/MO-01-0302(유의사항안내2).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">24.7.22 문구수정,페이징 숫자변경(2/4)</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                            	<td class="title1"></td>
+                            	<td class="title2">운전중 정차</td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0303(유의사항안내3).html" target="_blank">/모바일/MO-01-0302(유의사항안내3).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">7.22 페이징 숫자변경(3/4)<br> 7.22 띄어쓰기 수정 (이동 중)<br> 7.29 이미지명 변경</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                            	<td class="title1"></td>
+                            	<td class="title2">상담사 보호</td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0304(유의사항안내4).html" target="_blank">/모바일/MO-01-0304(유의사항안내4).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">24.7.22 페이징 숫자변경(4/4)</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">다음 진행사항 안내</td>
+								<td class="url">
+                                    <a href="mobile/MO-01-0305(유의사항안내5).html" target="_blank">/모바일/MO-01-0305(유의사항안내5).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">24.7.22 페이지 삭제</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">약관동의</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0401(약관동의).html" target="_blank">/모바일/MO-01-0401(약관동의).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo">24.7.22 순서변경, 약관추가</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">약관동의 상세</td>
+								<td class="title2">전자금융거래 이용약관</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0402(전자금융거래).html" target="_blank">/모바일/MO-01-0402(전자금융거래).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo">24.07.22 내용변경,클래스추가,ID변경(03->02)</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">개인(신용) 정보ㆍ수집 이용약관</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0403(개인정보수집).html" target="_blank">/모바일/MO-01-0403(개인정보수집).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo">24.07.22 내용변경,ID변경(02->03)</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">고유식별정보의 처리에 대한 동의</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0405(고유식별정보동의).html" target="_blank">/모바일/MO-01-0404(고유식별정보동의).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                            
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">녹화ㆍ녹취 이용동의</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0404(녹화녹취이용동의).html" target="_blank">/모바일/MO-01-0405(녹화녹취이용동의).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo">24.07.22 내용변경</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">권한허용 안내</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0501(권한허용안내).html" target="_blank">/모바일/MO-01-0501(권한허용안내).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">프리체크(카메라,마이크)</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0503(프리체크_카메라,마이크).html" target="_blank">/모바일/MO-01-0503(프리체크_카메라,마이크).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">권한 허용 안함 경고 노출</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0504(권한거부pop).html" target="_blank">/모바일/MO-01-0504(권한거부pop).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>         
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">권한 허용 안함(설정방법 안내 이미지)_안드로이드</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0505(권한허용_설정방법_안드로이드).html" target="_blank">/모바일/MO-01-0505(권한허용_설정방법_안드로이드).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr> 
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">권한 허용 안함(설정방법 안내 이미지)_ios</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0505(권한허용_설정방법_ios).html" target="_blank">/모바일/MO-01-0505(권한허용_설정방법_ios).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>                             
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">신분증 선택</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0601(신분증 촬영 준비).html" target="_blank">/모바일/MO-01-0601(신분증 촬영 준비).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">7.29 이미지명 변경, 7.30 문구변경,마크업삭제</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">신분증(주민등록증,운전면허증,외국인등록증) 촬영안내</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0701(주민운전외국인촬영준비).html" target="_blank">/모바일/MO-01-0701(주민운전외국인촬영준비).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">07.23 문구수정(진행 -> 촬영), 07.29 이미지명 변경</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증(주민등록증,운전면허증,외국인등록증) 촬영</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0702(촬영인식전).html" target="_blank">/모바일/MO-01-0702(촬영인식전).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">2024.07.22 마크업삭제(버튼)</td>
+                            </tr>           
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">(주민등록증,운전면허증) 인증 완료</td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0301(주민,운전-인증완료).html" target="_blank">/모바일/CO-01-0301(주민,운전-인증완료).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">07.29 이미지 확장자 변경</td>
+                            </tr>    
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">인증결과</td>
+								<td class="title2">주민등록증 촬영 인식 후</td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0101(주민등록증 촬영_인식 후).html" target="_blank">/모바일/CO-01-0101(주민등록증 촬영_인식 후).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"> 2024.07.22 마크업변경/삭제</td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">인증결과</td>
+								<td class="title2">운전면허증 촬영 인식 후</td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0101(운전면허증 촬영_인식 후).html" target="_blank">/모바일/CO-01-0101(운전면허증 촬영_인식 후).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"> 2024.07.22 마크업변경/삭제</td>
+                            </tr> 
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">인증결과</td>
+								<td class="title2">외국인등록증 촬영 인식 후</td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0101(외국인등록증 촬영_인식 후).html" target="_blank">/모바일/CO-01-0101(외국인등록증 촬영_인식 후).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"> 2024.07.22 마크업변경/삭제</td>
+                            </tr> 
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">인증결과</td>
+								<td class="title2">여권 촬영 인식 후</td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0101(여권 촬영_인식 후).html" target="_blank">/모바일/CO-01-0101(여권 촬영_인식 후).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"> 2024.07.22 마크업변경/삭제</td>
+                            </tr>           
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">인증완료 안내</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0102(인증완료).html" target="_blank">/모바일/CO-01-0102(인증완료).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">07.29 이미지 확장자 변경(gif)</td>
+                            </tr>  
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">촬영실패</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0103(인증실패).html" target="_blank">/모바일/CO-01-0103(인증실패).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">2024.07.22 마크업변경</td>
+                            </tr>  
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">예약불가</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0201(예약불가).html" target="_blank">/모바일/CO-01-0201(예약불가).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>  
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">시스템오류</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0202(시스템오류).html" target="_blank">/모바일/CO-01-0202(시스템오류).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>  
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">화상상담로딩중</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0204(로딩중).html" target="_blank">/모바일/CO-01-0204(로딩중).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo">2024.07.23 화면ID 변경</td>
+                            </tr>    
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">뒤로가기</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/CO-01-0205(뒤로가기).html" target="_blank">/모바일/CO-01-0205(뒤로가기).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">여권촬영 안내</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0801(여권 촬영 준비).html" target="_blank">/모바일/MO-01-0801(여권 촬영 준비).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권촬영</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0802(여권 촬영인식전).html" target="_blank">/모바일/MO-01-0802(여권 촬영인식전).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr> 
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">모바일신분증 안내</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-0901(모바일신분증안내)_작업중.html" target="_blank">/모바일/MO-01-0901(모바일신분증안내).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done"></span>
+                                </td>
+                                <td class="update"></td>
+                                <td class="memo"></td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">상담사 도움 팝업</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1002(상담사도움팝업).html" target="_blank">/모바일/MO-01-1002(상담사도움팝업).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">2024.07.23 문구수정</td>
+                            </tr>            
+                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">상담 대기 중</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1101(상담대기중).html" target="_blank">/모바일/MO-01-1101(상담대기중).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">07.22 문구수정, 07.29 이미지명 변경 </td>
+                            </tr>     
+                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">중지</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1102(상담중지 pop).html" target="_blank">/모바일/MO-01-1102(상담중지 pop).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">2024.07.22 문구수정, 마크업삭제</td>
+                            </tr>    
+                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약 확인 팝업</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1102-1(예약확인팝업).html" target="_blank">/모바일/MO-01-1102-1(예약확인팝업).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                                 
+                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약하기</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1103(예약하기).html" target="_blank">/모바일/MO-01-1103(예약하기).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약완료</td>
+                                <td class="url">
+                                    <a href="mobile/MO-01-1104(예약완료).html" target="_blank">/모바일/MO-01-1104(예약완료).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.06.28</td>
+                                <td class="memo">07.22 마크업추가, 07.29 이미지명 변경</td>
+                            </tr>         
+                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">고객화면 레이아웃</td>
+								<td class="title2">1:1화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0101(고객화상1).html" target="_blank">/모바일/CO-02-0101(고객화상1).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:2화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0101-1(고객화상2).html" target="_blank">/모바일/CO-02-0101-1(고객화상2).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:3화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0101-2(고객화상3).html" target="_blank">/모바일/CO-02-0101-2(고객화상3).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                                                   
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:4화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0101-3(고객화상4).html" target="_blank">/모바일/CO-02-0101-3(고객화상4).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">썸네일 형식의 화면 레이아웃</td>
+								<td class="title2">1:1화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0103(상단영상썸네일1-1).html" target="_blank">/모바일/CO-02-0103(상단영상썸네일1-1).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                                                                                                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:2화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0103-1(상단영상썸네일1-2).html" target="_blank">/모바일/CO-02-0103-1(상단영상썸네일1-2).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>        
+                                                                                                                                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:3화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0103-2(상단영상썸네일1-3).html" target="_blank">/모바일/CO-02-0103-2(상단영상썸네일1-3).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                                                                                                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:4화면 레이아웃</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0103-3(상단영상썸네일1-4).html" target="_blank">/모바일/CO-02-0103-3(상단영상썸네일1-4).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>   
+                                                                                                                                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">(고객)재연결 시도</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0306(재연결).html" target="_blank">/모바일/CO-02-0306(재연결).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>  
+                                                                                                                                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">고객화면(종료,음소거,채팅)</td>
+                                <td class="url">
+                                    <a href="mobile/CO-02-0306-1(종료음소거채팅).html" target="_blank">/모바일/CO-02-0306-1(종료음소거채팅).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">채팅</td>
+								<td class="title2">채팅(2줄 노출)</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-0401(채팅2줄).html" target="_blank">/모바일/MO-02-0401(채팅2줄).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                                    
+                                                                                                                                                                                                       
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">채팅창</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-0402(채팅).html" target="_blank">/모바일/MO-02-0402(채팅).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo">2024.07.22 마크업 삭제</td>
+                            </tr>    
+                                                                                                                                                                                                                                   
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">사진찍기</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1002(고객사진촬영).html" target="_blank">/모바일/MO-02-1002(고객사진촬영).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.05</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                                                                                                                                                                   
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">이용완료</td>
+								<td class="title2">상담종료 팝업</td>
+                                <td class="url">
+                                    <a href="mobile/MO-03-0101(상담종료 pop).html" target="_blank">/모바일/MO-03-0101(상담종료 pop).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                                                                                                                                                                   
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">이용완료</td>
+                                <td class="url">
+                                    <a href="mobile/MO-03-0102(이용완료).html" target="_blank">/모바일/MO-03-0102(이용완료).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done"></span>
+                                </td>
+                                <td class="update"></td>
+                                <td class="memo">디자인 작업중</td>
+                            </tr>     
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">만족도 조사 요청</td>
+                                <td class="url">
+                                    <a href="mobile/MO-03-0202(만족도조사요청).html" target="_blank">/모바일/MO-03-0202(만족도조사요청).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>          
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">만족도 조사1</td>
+                                <td class="url">
+                                    <a href="mobile/MO-03-0203(만족도조사1).html" target="_blank">/모바일/MO-03-0203(만족도조사1).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">만족도 조사2</td>
+                                <td class="url">
+                                    <a href="mobile/MO-03-0203(만족도조사1).html" target="_blank">/모바일/MO-03-0203(만족도조사2).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">서류 안내 공유</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1006(서류안내).html" target="_blank">/모바일/MO-02-1006(서류안내).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">고객 서류 제출</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1008(고객서류제출).html" target="_blank">/모바일/MO-02-1008(고객서류제출).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo"></td>
+                            </tr>          
+                                                                                                                                                                                                                                                               
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">서류 촬영</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1009(서류촬영제출).html" target="_blank">/모바일/MO-02-1009(서류촬영제출).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo"></td>
+                            </tr>                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                           
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">고객 PDF 전자서식</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1010(고객PDF전자서식).html" target="_blank">/모바일/MO-02-1010(고객PDF전자서식).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">문자 입력</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1011(문자입력).html" target="_blank">/모바일/MO-02-1011(문자입력).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr> 
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">숫자 입력</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1012(숫자입력).html" target="_blank">/모바일/MO-02-1012(숫자입력).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>                             
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">숫자 보안키패드 입력</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1013(보안키패드).html" target="_blank">/모바일/MO-02-1013(보안키패드).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서명 입력</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1014(서명입력).html" target="_blank">/모바일/MO-02-1014(서명입력).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">덧글쓰기 기능</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1015(덧글쓰기).html" target="_blank">/모바일/MO-02-1015(덧글쓰기).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>         
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">체크 동의</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1016(체크동의).html" target="_blank">/모바일/MO-02-1016(체크동의).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo">가로화면</td>
+                            </tr>        
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서명 재사용 동의</td>
+                                <td class="url">
+                                    <a href="mobile/MO-02-1017(서명재사용동의).html" target="_blank">/모바일/MO-02-1017(서명재사용동의).html</a>
+                                </td>
+                                <td class="status">
+                                    <span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.31</td>
+                                <td class="memo"></td>
+                            </tr>                                                                                                 
+                        </tbody>
+
+                        <!-- 상담사(PC) -->
+                        <tbody id="c2">
+                            <tr>
+                                <th class="category" colspan="8">상담사 (오른쪽 마우스 - 새탭에서 링크 열기)</th>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">로그인</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1501(로그인).html" target="_blank">/consultant/PC-02-1501(로그인).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">로그인 후 상담사 첫화면</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1502(첫화면).html" target="_blank">/consultant/PC-02-1502(첫화면).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">2024.07.29 마크업 추가</td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">로그아웃</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1601(로그아웃).html" target="_blank">/consultant/PC-02-1601(로그아웃).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>                            
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">상담사 화면 레이아웃</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0201(상담사화면레이아웃).html" target="_blank">/consultant/CO-02-0201(상담사화면레이아웃).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">상담사 화상 영역 레이아웃</td>
+								<td class="title2">1:1 상담사 화면 레이아웃</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0202(1-1상담사영역).html" target="_blank">/consultant/CO-02-0202(1-1상담사영역).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>    
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:2 상담사 화면 레이아웃</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0202-1(1-2상담사영역).html" target="_blank">/consultant/CO-02-0202-1(1-2상담사영역).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:3 상담사 화면 레이아웃</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0202-2(1-3상담사영역).html" target="_blank">/consultant/CO-02-0202-2(1-3상담사영역).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>    
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1:4 상담사 화면 레이아웃</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0202-3(1-4상담사영역).html" target="_blank">/consultant/CO-02-0202-3(1-4상담사영역).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo">24.07.19 네트워크 아이콘 변경(4종류), 퍼블 코멘트 참고</td>
+                            </tr>  
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">화면버튼</td>
+								<td class="title2">음소거</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0301(음소거).html" target="_blank">/consultant/CO-02-0301(음소거).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">카메라회전</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0301(카메라회전).html" target="_blank">/consultant/CO-02-0301(카메라회전).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">화상영역 하일라이팅</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0307(화상하일라이팅).html" target="_blank">/consultant/CCO-02-0307(화상하일라이팅).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>   
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">컨텐츠 영역 문서 확대</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0401(컨텐츠영역문서확대).html" target="_blank">/consultant/CO-02-0401(컨텐츠영역문서확대).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr> 
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">메모하기</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0601(메모하기).html" target="_blank">/consultant/CO-02-0601(메모하기).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>     
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">팝업스타일</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0701(팝업스타일).html" target="_blank">/consultant/CO-02-0701(팝업스타일).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>  
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">고객화면 미러링</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0801(고객화면미러링).html" target="_blank">/consultant/CO-02-0801(고객화면미러링).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.12</td>
+                                <td class="memo"></td>
+                            </tr>       
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">상담사 전용 메뉴 버튼</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0101(상담사전용버튼).html" target="_blank">/consultant/PC-02-0101(상담사전용버튼).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>          
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">거래/상담 업무 버튼</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0101-1(거래상담업무버튼).html" target="_blank">/consultant/PC-02-0101-1(거래상담업무버튼).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>      
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">대기</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0102(대기).html" target="_blank">/consultant/PC-02-0102(대기).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo">2024.07.29 마크업 삭제</td>
+                            </tr>     
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">상담 연결 요청 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0102-4(상담연결요청팝업).html" target="_blank">/consultant/PC-02-0102-4(상담연결요청팝업).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                              
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">상담 연결 첫화면</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0102-1(상담연결첫화면).html" target="_blank">/consultant/PC-02-0102-1(상담연결첫화면).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>      
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">자리비움</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0103(자리비움).html" target="_blank">/consultant/PC-02-0103(자리비움).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>                              
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약자리스트</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0105(예약자리스트).html" target="_blank">/consultant/PC-02-0105(예약자리스트).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약자 초대중 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0105-1(예약자초대중팝업).html" target="_blank">/consultant/PC-02-0105-1(예약자초대중팝업).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">예약자 호출 후 상담사 대기중 화면</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0105-2(예약자호출상담사대기).html" target="_blank">/consultant/PC-02-0105-2(예약자호출상담사대기).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">고객 별도 초대 팝업 확인</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0106-2(별도초대팝업).html" target="_blank">/consultant/PC-02-0106-2(별도초대팝업).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                                                     
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">주고객 아웃</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0106-1(주고객아웃).html" target="_blank">/consultant/PC-02-0106-1(주고객아웃).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">고객정보</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0201(고객정보).html" target="_blank">/consultant/PC-02-0201(고객정보).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">신분증 촬영(상담전 촬영한 고객)</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0206(신분증촬영_상담전).html" target="_blank">/consultant/PC-02-0206(신분증촬영_상담전).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>        
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증(상담전결과 리턴메시지pop)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0207(상담전결과 리턴메시지pop).html" target="_blank">/consultant/PC-02-0207(상담전결과 리턴메시지pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증 촬영(상담전 촬영한 고객)고객영상</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0208(상담전촬영고객).html" target="_blank">/consultant/PC-02-0208(상담전촬영고객).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">신분증 촬영(상담전 촬영 안한 고객)</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0209(신분증_상담전촬영안한고객).html" target="_blank">/consultant/PC-02-0209(신분증_상담전촬영안한고객).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>          
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증 촬영 요청</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0210(신분증촬영요청).html" target="_blank">/consultant/PC-02-0210(신분증촬영요청).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증 진위여부 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0211(신분증진위여부pop).html" target="_blank">/consultant/PC-02-0211(신분증진위여부pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증(상담전 촬영 안한 고객) 진위여부 결과값 리턴 메시지 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0212(촬영안한결과리턴메시지pop).html" target="_blank">/consultant/PC-02-0212(촬영안한결과리턴메시지pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">신분증(상담전 촬영 안한 고객) 고객영상(콘텐츠영역)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0213(신분증촬영안한고객정보).html" target="_blank">/consultant/PC-02-0213(신분증촬영안한고객정보).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">외국인등록증 촬영</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0214(외국인등록증촬영).html" target="_blank">/consultant/PC-02-0214(외국인등록증촬영).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">외국인등록증 촬영 요청(앞/뒤)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0215(외국인등록증촬영요청).html" target="_blank">/consultant/PC-02-0215(외국인등록증촬영요청).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">외국인등록증 진위여부 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0216(외국인진위여부pop).html" target="_blank">/consultant/PC-02-0216(외국인진위여부pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>          
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">외국인 진위여부 결과 값 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0217(외국인진위결과pop).html" target="_blank">/consultant/PC-02-0217(외국인진위결과pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>        
+                                                        
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">외국인등록증 고객영상(컨텐트 영역)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0218(외국인등록증고객영상).html" target="_blank">/consultant/PC-02-0218(외국인등록증고객영상).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">국가보훈증 촬영</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0219(국가보훈증촬영).html" target="_blank">/consultant/PC-02-0219(국가보훈증촬영).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>     
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">국가보훈증 촬영 요청</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0220(국가보훈증촬영요청).html" target="_blank">/consultant/PC-02-0220(국가보훈증촬영요청).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>         
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">국가보훈증 진위여부 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0221(국가보훈증진위여부pop).html" target="_blank">/consultant/PC-02-0221(국가보훈증진위여부pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>                    
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">국가보훈증 진위여부 결과 값 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0222(국가보훈증결과pop).html" target="_blank">/consultant/PC-02-0222(국가보훈증결과pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>     
+                            
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">국가보훈증 진위여부 팝업(편집)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0223(국가보훈증진위여부pop)편집.html" target="_blank">/consultant/PC-02-0223(국가보훈증진위여부pop)편집.html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>      
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">국가보훈증 고객 영상(컨텐츠영역)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0224(국가보훈증고객영상).html" target="_blank">/consultant/PC-02-0224(국가보훈증고객영상).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>          
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">여권 촬영</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0225(여권촬영).html" target="_blank">/consultant/PC-02-0225(여권촬영).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>            
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 촬영 요청</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0226(여권촬영요청).html" target="_blank">/consultant/PC-02-0226(여권촬영요청).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 진위여부 팝업(구권)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0227(여권진위여부pop_구권).html" target="_blank">/consultant/PC-02-0227(여권진위여부pop_구권).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 진위여부 팝업(신권)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0228(여권진위여부pop_신권).html" target="_blank">/consultant/PC-02-0228(여권진위여부pop_신권).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>            
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 진위여부 결과 값 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0229(여권진위여부 결과pop).html" target="_blank">/consultant/PC-02-0229(여권진위여부 결과pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>            
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 진위여부 팝업(편집)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0230(여권진위여부pop)편집.html" target="_blank">/consultant/PC-02-0230(여권진위여부pop)편집.html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>           
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">여권 고객 영상(컨텐츠 영역)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0231(여권고객영상).html" target="_blank">/consultant/PC-02-0231(여권고객영상).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>        
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">모바일 신분증 촬영</td>
+								<td class="title2"></td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0232(모바일신분증촬영).html" target="_blank">/consultant/PC-02-0232(모바일신분증촬영).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>             
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">모바일 신분증 촬영 요청</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0233(모바일신분증촬영요청).html" target="_blank">/consultant/PC-02-0233(모바일신분증촬영요청).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>         
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">모바일 신분증 가져오기 결과값 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0234(모바일신분증결과pop).html" target="_blank">/consultant/PC-02-0234(모바일신분증결과pop).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>       
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">모바일 신분증 고객 영상(컨텐츠 영역)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0235(모바일신분증고객영상).html" target="_blank">/consultant/PC-02-0235(모바일신분증고객영상).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.29</td>
+                                <td class="memo"></td>
+                            </tr>     
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1">채팅</td>
+								<td class="title2">채팅(2줄 노출)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0401(채팅).html" target="_blank">/consultant/PC-02-0401(채팅).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>             
+
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">1디바이스 2개 신분증(+추가)촬영</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0502(2개신분증추가).html" target="_blank">/consultant/PC-02-0502(2개신분증추가).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.26</td>
+                                <td class="memo"></td>
+                            </tr>                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">상담사초대</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0107(상담사초대).html" target="_blank">/consultant/PC-02-0107(상담사초대).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>   
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">초대 받은 상담사</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0107-1(초대받은상담사).html" target="_blank">/consultant/PC-02-0107-1(초대받은상담사).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">권한이양</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0107-2(권한이양).html" target="_blank">/consultant/PC-02-0107-2(권한이양).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">권한이양 받은 상담사 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0107-3(권한이양받은상담사).html" target="_blank">/consultant/PC-02-0107-3(권한이양받은상담사).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">상담사 초대중인 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0107-4(상담사초대중).html" target="_blank">/consultant/PC-02-0107-4(상담사초대중).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">종료</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0108(종료).html" target="_blank">/consultant/PC-02-0108(종료).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>        
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">후처리서식</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-0109(후처리서식).html" target="_blank">/consultant/PC-02-0109(후처리서식).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">2차인증 휴대폰인증 상담사 화면</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0602(2차휴대폰인증).html" target="_blank">/consultant/CO-02-0602(2차휴대폰인증).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">2차인증 카드인증 상담사 화면</td>
+                                <td class="url">
+                                	<a href="consultant/CO-02-0603(2차카드인증).html" target="_blank">/consultant/CO-02-0603(2차카드인증).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.07.19</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">전자문서</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1001(전자문서).html" target="_blank">/consultant/PC-02-1001(전자문서).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">전자서식 발행</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1002(전자서식발행).html" target="_blank">/consultant/PC-02-1002(전자서식발행).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">전자서식 발행</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1003(전자서식발행).html" target="_blank">/consultant/PC-02-1003(전자서식발행).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 안내</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1004(서류안내).html" target="_blank">/consultant/PC-02-1004(서류안내).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>       
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 선택 및 안내</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1005(서류선택및안내).html" target="_blank">/consultant/PC-02-1005(서류선택및안내).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>   
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 안내 공유</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1006(서류안내공유).html" target="_blank">/consultant/PC-02-1006(서류안내공유).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 제출</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1007(서류제출).html" target="_blank">/consultant/PC-02-1007(서류제출).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">고객 서류 제출</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1008(고객서류제출).html" target="_blank">/consultant/PC-02-1008(고객서류제출).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">제출 서류 편집</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1009(제출서류편집).html" target="_blank">/consultant/PC-02-1009(제출서류편집).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">삭제 확인 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1010(서류제출편집).html" target="_blank">/consultant/PC-02-1010(서류제출편집).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>   
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 진위 확인</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1011(서류진위확인).html" target="_blank">/consultant/PC-02-1011(서류진위확인).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서류 진위 확인 실패</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1012(서류진위확인실패).html" target="_blank">/consultant/PC-02-1012(서류진위확인실패).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">전자서식 작성</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1013(전자서식작성).html" target="_blank">/consultant/PC-02-1013(전자서식작성).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>    
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">보기 영역 기능</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1014(보기영역기능).html" target="_blank">/consultant/PC-02-1014(보기영역기능).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>   
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서식 입력 기능(문자,숫자)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1015(서식입력기능_문자,숫자).html" target="_blank">/consultant/PC-02-1015(서식입력기능_문자,숫자).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서식 입력 기능(보안 키패드)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1015(서식입력기능_보안키패드).html" target="_blank">/consultant/PC-02-1015(서식입력기능_보안키패드).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>      
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서식 입력 기능(덧글쓰기)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1015(서식입력기능_덧글쓰기).html" target="_blank">/consultant/PC-02-1015(서식입력기능_덧글쓰기).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">서식 입력 기능(덧글쓰기)</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1015(서식입력기능_서명).html" target="_blank">/consultant/PC-02-1015(서식입력기능_서명).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>                                                                                
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">덧글쓰기 기능</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1016(덧글쓰기기능).html" target="_blank">/consultant/PC-02-1016(덧글쓰기기능).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>     
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">은행선택 팝업</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1017(은행선택팝업).html" target="_blank">/consultant/PC-02-1017(은행선택팝업).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>         
+                                                                                    
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id"></td>
+                                <td class="title1"></td>
+								<td class="title2">웹 페이지 공유</td>
+                                <td class="url">
+                                	<a href="consultant/PC-02-1102(웹페이지공유).html" target="_blank">/consultant/PC-02-1102(웹페이지공유).html</a>
+                                </td>
+                                <td class="status">
+									<span class="done">○</span>
+                                </td>
+                                <td class="update">2024.08.02</td>
+                                <td class="memo"></td>
+                            </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                        </tbody>
+
+                        <!-- 관리자 -->
+                        <tbody id="c3">
+                            <tr>
+                                <th class="category" colspan="8">관리자</th>
+                            </tr>
+                            
+							<!-- 인수지침(기준) -->
+                            <tr id="">
+                                <td class="num"></td>
+                                <td class="id bt1"></td>
+                                <td class="title1 bt1"></td>
+								<td class="title2 bt1"></td>
+                                <td class="url bt1">
+                                	<a href="" target="_blank"></a>
+                                </td>
+                                <td class="status">
+                                	<span class="done"></span>
+                                </td>
+                                <td class="update"></td>
+                                <td class="memo"></td>
+                            </tr>					
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Page List  -->
+            </div>
+        </div>
+    </main>
+    
+
+
+
+    <aside id="pub-preview" role="region">
+		<div class="frame_device">
+            <div class="device">
+                  <div class="btn_size_set">
+                        <button type="button" w="360" h="780">iphone12 mini</button>
+						<button type="button" w="430" h="932">iphone14 pro max</button>
+						<button type="button" w="360" h="772">galaxy S22 Ultra</button>                        
+						<button type="button" w="412" h="915">galaxy S20 ultra</button>                        
+                  </div>
+                  <iframe width="360px" height="780px" src="mobile/MO-01-0201(랜딩).html" frameborder="0" name="device"></iframe>
+            </div>
+        </div>		
+    </aside>
+</div>
+
+<script>
+$(function () {
+    // 리스트 수, 진행률
+    var $list = $('#page-list'),
+        $listNum = $list.find('td.num'), // 순번
+        $listOk = $list.find('td.status > .done'), // 완료
+        totalCount = $listNum.length, // 총 리스트(페이지) 수
+        okCount = $listOk.length, // 완료된 리스트(페이지) 수
+        progress = okCount / totalCount * 100; // 진행률
+
+    // 순번 출력
+    $listNum.each(function(index) {
+        $(this).text(index + 1);
+    });
+    $('.list-count dd.total').find('em').text(totalCount);
+    $('.list-count dd.finished').find('em').text(okCount);
+    $('.list-count dd.progress').find('em').text(progress.toFixed(1));
+
+    checkPosition();
+    $(window).resize(function() {
+        checkPosition();
+    });
+});
+
+function checkPosition() {
+    var $url = $('#page-list td.url');
+    var $iframe = $('#pub-preview').find('iframe');
+    if (window.matchMedia('(min-width: 1200px)').matches) {
+        $url.each(function() {
+            $(this).on('click', function(){
+                var src = $(this).find('a').attr('href');
+                $('#page-list').find('tr').removeClass('current');
+                $(this).closest('tr').addClass('current');
+                $iframe.attr('src', src);
+                return false;
+            });
+        });
+    } else {
+        $url.off();
+    }
+}
+// 사이즈 변경 추가
+$(function () {
+    $('.btn_size_set button').on('click', function(e) {
+		e.preventDefault();
+		var $this = $(this), deviceW = $this.attr('w'), deviceH = $this.attr('h'), frameW = Number(deviceW)+16, frameH = Number(deviceH)+16, wrapP = Number(deviceW)+40 ;
+		$('.frame_device').css('width', frameW);
+		$('.frame_device').css('height', frameH);
+		$('.frame_device .device iframe').css('width', deviceW);
+		$('.frame_device .device iframe').css('height', deviceH);
+		$('#gContainer').css('marginRight', wrapP);
+	});
+});
+</script>
+</body>
+</html>
