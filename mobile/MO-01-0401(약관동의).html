@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- container -->
+    <div class="container">        
+        <div class="contents">            
+            <div class="steplist_wrap">
+                <ol class="step-list">
+                    <li class="in"><em>현재단계</em>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ol>
+            </div>    
+            <h1>
+                화상상담을 위해 <br>
+                이용약관에 동의해 주세요
+            </h1>
+
+            <div class="agree">         
+                <div class="agreeItem agreeItem01 checkBoxLine">
+                    <!-- 24.07.22 순서변경 -->
+                    <div>
+                        <input type="checkbox" class="chk_agree_yesno" id="cautionInput_1" name="chk01">
+                        <label for="cautionInput_1">[필수] 전자금융거래 이용약관</label><img src="./img/arow-next.svg" alt="자세히보기">
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chk_agree_yesno" id="cautionInput_2" name="chk01">
+                        <label for="cautionInput_2">[필수] 개인(신용) 정보∙수집 이용약관</label><img src="./img/arow-next.svg" alt="자세히보기">
+                    </div>
+                    <!-- //24.07.22 순서변경 -->
+                    <div> <!-- 24.07.22 약관 추가 -->
+                        <input type="checkbox" class="chk_agree_yesno" id="cautionInput_3" name="chk01">
+                        <label for="cautionInput_3">[필수] 고유식별정보의 처리에 대한 동의</label><img src="./img/arow-next.svg" alt="자세히보기">
+                    </div> <!-- //24.07.22 약관 추가 -->
+                    <div>
+                        <input type="checkbox" class="chk_agree_yesno" id="cautionInput_4" name="chk01">
+                        <label for="cautionInput_4">[필수] 녹화, 녹취 이용 동의</label><img src="./img/arow-next.svg" alt="자세히보기">
+                    </div>
+                </div>
+                <div class="fixedclear"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- btn_bottom -->
+    <div class="btn_bottom cautionBtn">
+        <a href="javascript:void(0)" class="agree_next" onclick="setTimeout(move)">        
+            <input type="checkbox" id="agAll01">
+            <label for="agAll01" class="agreeAll">모두 동의하고 다음으로</label>  
+        </a>
+    </div>
+    <!-- btn_bottom end -->
+</body>
+</html>

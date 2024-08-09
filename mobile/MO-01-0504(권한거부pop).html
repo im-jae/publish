@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- container -->
+    <div class="container">        
+        <div class="contents">            
+            <div class="steplist_wrap">
+                <ol class="step-list">
+                    <li class="pass">1</li>
+                    <li class="in"><em>현재단계</em>2</li>
+                    <li>3</li>                    
+                </ol>
+            </div>    
+            <h1>
+                카메라와 마이크 상태를 <br>
+                확인해 주세요
+            </h1>            
+            <div class="access_circle">
+                <!-- 사용자 노출 안될 경우  -->
+                <div class="facenot" style="display: none;">
+                    <img src="./img/i_user.png" alt="">
+                    <p class="">얼굴이 보이지 않는다면 <br>아래 <span class="">설정 방법 안내보기</span>를 확인해주세요</p>
+                </div>
+                <!-- //사용자 노출 안될 경우  -->
+
+                <!-- 사용자 정상 노출된 경우 -->
+                <div class="camera_wrap">
+                    <img src="./img/thumb.png" alt="사용자 화면">
+                </div>   
+                <!-- //사용자 정상 노출된 경우  -->             
+            </div>
+            <hr class="dash"> 
+            <div class="access_state">
+                <div class="access_mictxt">
+                    <p style="display: none;">고객님 마이크 설정을 확인해주세요</p>  <!-- 마이크설정을 해야할 경우 노출 -->
+                    <p>고객님 소리가 잘들리고 있어요</p> 
+                </div>
+                <div class="volume_bar">
+                    <div class="volume_bar_active" style="width:33.33%"></div>
+                </div>
+            </div>   
+        
+        </div>
+        <div class="setup_guide">
+            <a href="#">카메라와 마이크 설정 방법 안내</a>
+        </div> 
+    </div>
+    <!-- container end -->
+
+    <!-- btn_bottom -->
+    <div class="btn_bottom">
+        <a href="javascript:void(0)">확인</a>
+    </div>
+    <!-- btn_bottom end -->
+
+    <!-- modal popup-->
+    <div class="modalBackColor" style="display: block;"></div>
+
+    <!-- 팝업 -->
+    <div class="modal_pop_small modal_no3" data-modal="3" style="display: block;">
+        <div id="alert_popup" class="smallPop popup_block" style="display: block;">
+            <div class="popCon">
+                <img src="./img/alert-light.svg" alt="느낌표아이콘">
+                <div class="pop_title">카메라 혹은 마이크에 대한 권한 사용을 거부 하셨습니다</div>
+                <div class="pop_contents">    </div>
+            </div>
+            <div class="btn_bottom">
+                <a href="javascript:void(0)">확인</a>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+
+</body>
+</html>

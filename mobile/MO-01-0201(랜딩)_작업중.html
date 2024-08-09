@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- <script defer src="./js/jquery-1.12.4.min.js"></script> -->
+    <!-- <script defer src="./js/jquery-ui.js"></script> -->
+    <script defer src="./js/script.js"></script>
+    <script type="text/javascript">
+        function btnclick() {
+            const modal1 = document.getElementById('modal1')
+            if(modal1.style.visibility === 'hidden') {
+                modal1.style.visibility = 'visible';        
+            }else{
+                modal1.style.visibility = 'hidden'
+            }
+        }
+    </script>  
+</head>
+<body>
+
+    <!-- header -->
+    <!-- <header id="header">
+        <div>
+            <div class="inner">
+                <a class="back" href="javascript:window.history.back();"><img src="./img/ico_back.png" alt="back"></a>
+                <h1>모바일 고객센터</h1>
+                <a class="home" href="./index.html"><img src="./img/ico_home.png" alt="home"></a>
+            </div>
+        </div>
+    </header> -->
+    <!-- header end -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="contents">
+            <div class="landing">
+                <img src="img/logo_hwgeneralins.png" alt="한화손해보험 로고" class="hlogo">
+                <h1 class="tit">
+                    모바일 고객센터에 <br>
+                    오신 것을 환영 합니다
+                </h1>
+                <!-- <div class="btns">
+                    <button type="button" class="entrance" data-modal="T1">입장하기</button>
+                </div> -->
+            </div>
+
+            <button type="button" class="btn entrance_btn modal_open" data-modal="T1">입장하기
+                <span class="arrow_rights">
+                    <img src="img/arow-right.svg" alt="화살표" class="arrwhite">
+                </span>
+            </button>
+
+            <div class="land_imgwrap">
+                <img src="./img/img_landing.png" alt="back">
+            </div>   
+        </div>
+    </div>
+    <!-- container end -->
+
+<!-- modal popup-->
+<div class="modalBackColor"></div>
+      
+<div class="modal_wrap modal_noT1" data-modal="T1">
+    <div class="modal_title">
+        <div class="tit_wrap">
+            <div class="tit">미리 확인해 주세요</div>        
+            <div class="num"><span>1</span> / 4</div>
+        </div>
+    </div>
+    <div class="modal_content">  
+        <div id="modal1">  
+            <div class="p1">
+                <h2>미리 신분증을 준비해주세요</h2>
+                <p>주민등록증, 운전면허증, 외국인등록증</p>                    
+            </div>        
+            <div class="advice">
+                <img src="./img/advice01.png" alt="신분증이미지">
+            </div>   
+        </div>  
+        <div id="modal2" style="display: none;">
+            <div class="p1">
+                <h2>데이터 환경을 확인해주세요</h2>
+                <p>휴대폰 요금제에 따라 데이터 통화료가 부과될 수 있으므로 와이파이 환경으로 변경해주세요.</p>               
+            </div>        
+            <div class="advice">
+                <img src="./img/advice02.png" alt="휴대폰이미지">
+            </div> 
+        </div>
+    </div>
+    <div class="bottom_wrap">
+        <button type="button" class="btn modalPageBtn" onclick="btnclick">다음</button> 
+    </div> 
+    <div class="bottom_wrap">
+        <button type="button" class="btn modalPageBtn1">이전</button> 
+        <button type="button" class="btn modalPageBtn2">다음</button> 
+    </div> 
+    <div class="bottom_wrap" style="display: none;">
+        <button type="button" class="btn modalPageBtn1">이전</button> 
+        <button type="button" class="btn modalPageBtn2">확인했어요</button> 
+    </div> 
+</div>
+<script type="text/javascript">
+    $('.modal_btn').on('click', function () {
+        modalEvt('open', $(this).data('modal1'));
+    });
+</script>    
+</body>
+</html>

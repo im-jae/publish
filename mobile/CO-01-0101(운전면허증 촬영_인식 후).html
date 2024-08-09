@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- container -->
+    <div class="container">        
+        <div class="contents">            
+            <!-- <div class="steplist_wrap"> 2024.07.22 마크업삭제
+                <ol class="step-list">
+                    <li class="pass">1</li>
+                    <li class="pass">2</li>
+                    <li class="in"><em>현재단계</em>3</li>
+                </ol>
+            </div>     -->
+            <h1>
+                신분증 정보를 확인해주세요
+            </h1>   
+            <div class="idcard_box">                             
+                <img src="img/img_driver.png" alt="운전면허증 이미지">            
+            </div>    
+            <!-- <div class="retake_wrap"> 2024.07.22 마크업삭제
+                <button type="button" class="btn_retake">                    
+                    다시 촬영하기
+                </button>     
+            </div>  -->
+            <div class="viewInputGroup">
+                <div class="mb18">
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" autocomplete="off" value="홍길동" required>
+                </div>
+                <div class="jumin mb18">
+                    <label>주민등록번호</label>
+                    <input type="tel" id="jumin1" autocomplete="off" value="123456" required maxlength="6" onkeyup="onlyNumber(this)">
+                    <span class="flat">-</span>
+                    <input type="password" id="jumin2" autocomplete="off" value="1234567" required maxlength="7" onkeyup="onlyNumber(this)">
+                </div>
+                <div class="mb18">
+                    <label>면허번호</label>
+                    <div class="inBtn">
+                        <input type="text" value="서울 07-222222-20">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- btn_bottom --> <!-- 2024.07.22 마크업변경 -->
+    <div class="bottom_wrap half">
+        <button type="button" class="btn modalPageBtn1">재촬영</button> 
+        <button type="button" class="btn modalPageBtn2">확인</button> 
+    </div> 
+    <!-- btn_bottom end --> <!-- //2024.07.22 마크업변경 -->
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">   
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- container -->
+    <div class="container">        
+        <div class="contents">              
+            <h1>
+                예약자의 이름과 휴대폰번호를 입력해 주세요
+            </h1>            
+            <div class="viewInputGroup">
+                <div>
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" autocomplete="off" required>
+                </div>
+                <div class="phoneNumber">
+                    <label>휴대폰번호</label>
+                    <div class="inBtn">
+                        <input type="tel" autocomplete="off" id="certificationNum" maxlength="11" required onkeyup="onlyNumber(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- btn_bottom -->
+    <div class="btn_bottom">
+        <a href="javascript:void(0)" class="light nextPhone">예약하기</a>
+    </div>
+    <!-- btn_bottom end -->
+
+</body>
+</html>

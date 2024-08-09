@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>한화손해보험</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favi.ico">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- container -->
+    <div class="container body_wrap">        
+        <div class="contents">            
+            <h1 class="idcard">
+                신분증을 사각형 안에 놓으면 자동으로 촬영 됩니다
+            </h1>   
+            <div class="camera_area">
+                <img src="" alt="">
+            </div>       
+            <ul class="camera_guide">
+                <li class="reflect">빛이 반사(형광등, 야외 역광)되지 않도록 주의 하세요</li>
+                <li class="outline">사각형 테두리 맞게 놓아주세요</li>
+            </ul>     
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- btn_bottom -->
+    <div class="btn_bottom">
+        <a href="javascript:void(0)">촬영하기</a>
+    </div>
+    <!-- btn_bottom end -->
+
+    <!-- modal popup-->
+    <div class="modalBackColor" style="display: block;"></div>
+
+    <!-- 팝업 -->
+    <div class="modal_pop_small modal_no3" data-modal="3" style="display: block;">
+        <div id="alert_popup" class="smallPop popup_block" style="display: block;">
+            <div class="popCon">
+                <img src="./img/alert-light.svg" alt="느낌표아이콘">
+                <div class="pop_title">상담 연결 후<br><span class="">상담사와 함께 촬영 할까요?</span></div> <!-- 2024.07.23 문구수정-->
+                <!-- <div class="pop_contents">
+                    취소하시면 처음부터 <br>다시 기다리셔야 해요.
+                </div> -->
+            </div>
+            <div class="btn_bottom half">
+                <a href="javascript:void(0)" class="light">아니요</a>
+                <a href="javascript:void(0)">네</a>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+</body>
+</html>
