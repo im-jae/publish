@@ -7,29 +7,34 @@
 	font-weight:700;
 	src:local('Hanwha Gothic Bold'), local('HanwhaGothic-Bold');
 	src:url(../fonts/04HanwhaGothicB.woff2) format('woff2');
+	src:url(../fonts/04HanwhaGothicB.woff) format('woff');  /* Modern Browsers */
 }
 
 @font-face{
 	font-family:'Hanwha Gothic';
 	font-style:normal;
 	font-weight:600;
-	src:local('Hanwha Gothic Regular'), local('HanwhaGothic-Regular');
-	src:url(../fonts/05HanwhaGothicR.woff2) format('woff2');
+	src:local('Hanwha Gothic Bold'), local('HanwhaGothic-Bold');
+	src:url(../fonts/04HanwhaGothicB.woff2) format('woff2');
+	src:url(../fonts/04HanwhaGothicB.woff) format('woff');  /* Modern Browsers */
 }
 
 @font-face{
 	font-family:'Hanwha Gothic';
 	font-style:normal;
 	font-weight:500;
-	src:local('Hanwha Gothic Light'), local('HanwhaGothic-Light');
-	src:url(../fonts/06HanwhaGothicL.woff2) format('woff2');
+	src:local('Hanwha Gothic Bold'), local('HanwhaGothic-Bold');
+	src:url(../fonts/04HanwhaGothicB.woff2) format('woff2');
+	src:url(../fonts/04HanwhaGothicB.woff) format('woff');  /* Modern Browsers */
 }
 
 @font-face{
 	font-family:'Hanwha Gothic';
 	font-style:normal;
 	font-weight:400;
-	src:local('Hanwha Gothic Thin'), local('HanwhaGothic-Thin');
+	src:local('Hanwha Gothic Bold'), local('HanwhaGothic-Bold');
+	src:url(../fonts/04HanwhaGothicB.woff2) format('woff2');
+	src:url(../fonts/04HanwhaGothicB.woff) format('woff');  /* Modern Browsers */
 }
 
 
